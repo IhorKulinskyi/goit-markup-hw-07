@@ -1,0 +1,13 @@
+.header {
+    box-sizing: border-box;
+    border-bottom: 1px solid #ececec;
+
+    letter-spacing: 0.02em;
+
+    background-color: $basic-white;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}

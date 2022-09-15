@@ -1,0 +1,33 @@
+.features {
+  background-color: $basic-white;
+}
+
+.features__list {
+  display: flex;
+  justify-content: center;
+}
+
+.features__title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.features__item {
+  width: calc((100% - 90px) / 4);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.features__bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: $secondary-bgc;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}

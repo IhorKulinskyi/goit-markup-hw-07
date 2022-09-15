@@ -1,0 +1,146 @@
+.form__title {
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.form-field__description {
+  margin-bottom: 5px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.form-field__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+}
+
+.form-field__input {
+  display: block;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 0 14px 0 40px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+
+  transition: border-color $transition-time $bezier-function;
+
+  &:focus {
+    outline: none;
+    border-color: $accent-color;
+  }
+
+  &--comment {
+    resize: none;
+    padding: 14px;
+    height: 120px;
+    width: 100%;
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.01em;
+
+      opacity: 0.5;
+    }
+  }
+}
+
+.form-field__icon {
+  display: inline-block;
+  fill: $primary-text-color;
+
+  transition: fill $transition-time $bezier-function;
+
+  &--person,
+  &--phone,
+  &--email {
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-field__input:focus ~ & {
+    fill: $accent-color;
+  }
+}
+
+.form-field--comment {
+  margin-bottom: 20px;
+}
+
+.form__button {
+  display: block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px 52px;
+  min-width: max-content;
+  margin: 0 auto;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  transition: color $transition-time $bezier-function,
+    background-color $transition-time $bezier-function;
+
+  &:hover,
+  &:focus {
+    color: $basic-white;
+    background-color: $accent-button-color;
+  }
+}
+
+.form-field--policy {
+  text-align: center;
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03;
+}
+
+.policy__description {
+  display: inline-flex;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+
+  text-align: center;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.policy__conditions {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03;
+}
+
+.policy__link {
+  color: $accent-color;
+
+  text-decoration: underline;
+  text-underline-offset: 2.5px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

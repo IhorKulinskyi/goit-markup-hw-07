@@ -1,0 +1,27 @@
+.footer__info {
+  margin-right: 70px;
+}
+
+.footer__address {
+  color: $basic-white;
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+}
+
+.footer-contacts__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-contacts__link {
+  color: $footer-contacts-color;
+  font-size: 14px;
+  line-height: 1.71;
+
+  transition: color $transition-time $bezier-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
