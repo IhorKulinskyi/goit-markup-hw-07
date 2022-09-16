@@ -1,7 +1,9 @@
 .card-set__list {
-  display: flex;
+  @extend %list;
+
+  @include centeredFlex($align: none);
+
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .card-product {
@@ -17,6 +19,8 @@
 }
 
 .card-product__link {
+  @extend %link;
+
   box-shadow: none;
   transition: box-shadow $transition-time $bezier-function;
 
@@ -38,6 +42,8 @@
 }
 
 .card-product__title {
+  @extend %title;
+
   margin-bottom: 5px;
 
   letter-spacing: 0.06em;
@@ -46,6 +52,8 @@
 }
 
 .card-product__description {
+  @extend %description;
+
   font-size: 16px;
   line-height: 1.88;
 }
@@ -76,6 +84,8 @@
 }
 
 .thumb__description {
+  @extend %description;
+
   position: absolute;
 
   width: 100%;
@@ -85,9 +95,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex;
 
   padding: 0 25px;
 

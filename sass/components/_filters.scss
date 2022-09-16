@@ -3,14 +3,17 @@
 }
 
 .filters__list {
-  display: flex;
-  justify-content: center;
+  @extend %list;
+
+  @include centeredFlex($aign: none);
 }
 .filters__item:not(:last-child) {
   margin-right: 8px;
 }
 
 .filters__button {
+  @extend %button;
+
   padding: 6px 22px;
 
   color: $primary-text-color;

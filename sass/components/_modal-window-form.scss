@@ -7,6 +7,8 @@
 }
 
 .form-field__description {
+  @extend %description;
+
   margin-bottom: 5px;
 
   font-size: 12px;
@@ -64,17 +66,19 @@
 
   transition: fill $transition-time $bezier-function;
 
-  &--person,
-  &--phone,
-  &--email {
+  .form-field__input:focus ~ & {
+    fill: $accent-color;
+  }
+}
+
+$icons: "person", "phone", "email";
+
+@each $iconName in $icons {
+  .form-field__icon--#{$iconName} {
     position: absolute;
     top: 50%;
     left: 24px;
     transform: translate(-50%, -50%);
-  }
-
-  .form-field__input:focus ~ & {
-    fill: $accent-color;
   }
 }
 
@@ -83,6 +87,8 @@
 }
 
 .form__button {
+  @extend %button;
+
   display: block;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   padding: 10px 52px;
@@ -114,6 +120,8 @@
 }
 
 .policy__description {
+  @extend %description;
+
   display: inline-flex;
   align-items: center;
 
@@ -135,6 +143,7 @@
 }
 
 .policy__link {
+  @extend %link;
   color: $accent-color;
 
   text-decoration: underline;

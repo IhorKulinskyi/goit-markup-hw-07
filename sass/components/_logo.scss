@@ -1,26 +1,24 @@
 .logo {
+  @extend %link;
   margin-right: 95px;
 
   color: $primary-text-color;
-  font-family: "Raleway";
+  font-family: $font-logo;
   font-size: 26px;
   line-height: 1.2;
 
   &.footer__logo {
-  margin-bottom: 20px;
-  margin-right: 0;
+    margin-bottom: 20px;
+    margin-right: 0;
 
-  color: $basic-white;
-}
+    color: $basic-white;
+  }
 }
 
 .logo__accent {
-  font-family: "Raleway";
+  font-family: $font-logo;
   font-size: 26px;
   line-height: 1.2;
 
   color: $accent-color;
 }
-
-
-

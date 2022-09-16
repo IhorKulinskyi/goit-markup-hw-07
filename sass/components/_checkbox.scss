@@ -5,9 +5,8 @@
 }
 
 .checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex;
+  
   width: 16px;
   height: 15px;
 

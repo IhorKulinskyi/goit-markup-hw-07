@@ -6,11 +6,12 @@
 }
 
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  @include centeredFlex($align:baseline);
 }
 
 .footer__title {
+  @extend %title;
+  
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
