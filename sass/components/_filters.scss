@@ -5,7 +5,7 @@
 .filters__list {
   @extend %list;
 
-  @include centeredFlex($aign: none);
+  @include centeredFlex($align: none);
 }
 .filters__item:not(:last-child) {
   margin-right: 8px;
